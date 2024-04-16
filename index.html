@@ -5,6 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML Page</title>
+    <script>
+        /// print array element using loop
+        // let arr=[10,4,5,6];
+        // for(let i=0;i<arr.length;i++){
+        //     console.log("number is",arr[i])
+        // }
+
+// max no in array
+        // let arr=[1,4,5,6];
+        // let maxNo=arr[0];
+        // for(let i=0;i<arr.length;i++){
+        //     if(maxNo<arr[i]){
+        //         maxNo=arr[i];
+        //     }
+        // }
+        // console.log(maxNo)
+
+        let arr=[1,4,5,6];
+        let minNo=arr[0];
+        for(let i=0;i<arr.length;i++){
+            if(minNo>arr[i]){
+                minNo=arr[i];
+            }
+        }
+        console.log(minNo)
+
+    </script>
 </head>
 <body>
     
@@ -13,7 +40,7 @@
     </header>
     
     <main>
-        <p>Hello, world!</p>
+        <p id="hello-1">Hello, world!</p>
     </main>
 
     <footer>

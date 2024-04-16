@@ -1,0 +1,14 @@
+git stands for 
+how to get clone "git clone https://github.com/Ahmer2204377/learning_1.git"
+
+check current status
+---git status
+
+it will return the file changes/file added/ files deleted
+
+---git add file_name
+
+to add the changes to commit
+
+create a commit with message
+git commit -m "hello"

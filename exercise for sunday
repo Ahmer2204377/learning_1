@@ -1,0 +1,30 @@
+// for(let i=10; i<=1000; i++){
+//    if(i%2 ==0){
+//     console.log(i + " is even");
+// } else {
+//     console.log(i + " is odd");
+//    }
+
+// }
+function salescheck(array){
+    const length=array.length;
+    var sum=0;
+    for(let i=0; i<length;i++){
+        sum = sum + array[i];
+    }
+    if(sum <= 1000){
+        return false;
+    }else{
+        return true;
+    }
+    
+    
+}
+array=[75,195,300,500,170]
+
+var checksum=salescheck(array);
+if(checksum == true){
+    console.log("target met");
+}else{
+    console.log("you need to make improvements");
+}

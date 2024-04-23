@@ -1,0 +1,19 @@
+// objects
+
+
+var car={
+    tyre:4,
+    engine:3000,
+    door : 4,
+    length : 5,
+    weight : 1000,
+    area : 0
+    
+}
+car.area= car.length*car.weight;
+console.log("no. of tyres",car.tyre)
+console.log("engine capacity",car.engine+"cc")
+console.log("no. of door",car.door)
+console.log("length of vehicle",car.length+"metre")
+console.log("weight of vehicle",car.weight+"kg")
+console.log("area of vehicle",car.area)

@@ -1,65 +1,104 @@
-function add(vhs){
-    const length= vhs.length;
-    var sum=0;
- for(let i=0; i < length ; i++ ){
-   debugger;
-    if(vhs[i].dis !==undefined){
-    sum= sum+vhs[i].price-vhs[i].dis;
-   }else{
-      sum= sum+vhs[i].price;
+// function add(vhs){
+//     const length= vhs.length;
+//     var sum=0;
+//  for(let i=0; i < length ; i++ ){
+//    debugger;
+//     if(vhs[i].dis !==undefined){
+//     sum= sum+vhs[i].price-vhs[i].dis;
+//    }else{
+//       sum= sum+vhs[i].price;
 
-    }
- }
-return sum;
+//     }
+//  }
+// return sum;
 
-}
-
-
-
-
-
-// var cars=[{
-//    tyre:4,
-//    engine:3000,
-//    door : 4,
-//    length : 5,
-//    weight : 1000,
-//    area : 0
 // }
-//    ,{
-//       tyre:4,
-//       engine:3000,
-//       door : 4,
-//       length : 5,
-//       weight : 1000,
-//       area : 0
-//    }]
+
+
+
+
+
+// // var cars=[{
+// //    tyre:4,
+// //    engine:3000,
+// //    door : 4,
+// //    length : 5,
+// //    weight : 1000,
+// //    area : 0
+// // }
+// //    ,{
+// //       tyre:4,
+// //       engine:3000,
+// //       door : 4,
+// //       length : 5,
+// //       weight : 1000,
+// //       area : 0
+// //    }]
 
    
-// add(cars)
+// // add(cars)
 
 
-var cart=
-[
-   {
-     "id": 1,
-     "name": "Product 1",
-     "price": 10.99,
-     "dis" : 2,
-     "description": "This is a sample product description."
-   },
-   {
-     "id": 2,
-     "name": "Product 2",
-     "price": 20.49,
-     "dis" : 2,
-     "description": "Another sample product description."
-   },
-   {
-     "id": 3,
-     "name": "Product 3",
-     "price": 15.75,
-     "description": "Yet another sample product description."
-   }
- ]
- add(cart)
+// var cart=
+// [
+//    {
+//      "id": 1,
+//      "name": "Product 1",
+//      "price": 10.99,
+//      "dis" : 2,
+//      "description": "This is a sample product description."
+//    },
+//    {
+//      "id": 2,
+//      "name": "Product 2",
+//      "price": 20.49,
+//      "dis" : 2,
+//      "description": "Another sample product description."
+//    },
+//    {
+//      "id": 3,
+//      "name": "Product 3",
+//      "price": 15.75,
+//      "description": "Yet another sample product description."
+//    }
+//  ]
+//  add(cart)
+
+function add(vhs) {
+  const length = vhs.length;
+  var sum = 0;
+  for (let i = 0; i < length; i++) {
+      if (vhs[i].dis !== undefined) {
+          const discount = parseFloat(vhs[i].dis) || 0; 
+          sum += vhs[i].price - (vhs[i].price * discount/100);
+      } else {
+          sum += vhs[i].price;
+      }
+  }
+  return sum;
+}
+
+var cart = [
+  {
+      "id": 1,
+      "name": "Product 1",
+      "price": 10.99,
+      "dis": 2, 
+      "description": "This is a sample product description."
+  },
+  {
+      "id": 2,
+      "name": "Product 2",
+      "price": 20.49,
+      "dis": 2, 
+      "description": "Another sample product description."
+  },
+  {
+      "id": 3,
+      "name": "Product 3",
+      "price": 15.75,
+      "description": "Yet another sample product description."
+  }
+];
+
+console.log(add(cart));

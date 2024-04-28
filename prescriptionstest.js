@@ -680,25 +680,30 @@ var prescriptiondetails =
 function checkstatus(prescription){
     
     const length = prescription.prescriptions.length;
-    approvedcount=0;
-    rejetectedcount=0;
-    pendingcount=0;
+    // approvedcount=0;
+    approvedprescriptions=[];
+    // rejetectedcount=0;
+    rejectedprescriptions=[];
+    // pendingcount=0;
+    pendingprescriptions=[];
     for (let i=0; i<length; i++ ){
         if(prescription.prescriptions[i].prescriptionStatus== 'approved'){
-            approvedcount = approvedcount + 1;
-            
+            // approvedcount = approvedcount + 1;
+            approvedprescriptions.push(prescription.prescriptions[i]);
 
         }else if(prescription.prescriptions[i].prescriptionStatus== 'rejected'){
-            rejetectedcount = rejetectedcount+1;
+            // rejetectedcount = rejetectedcount+1;
+            rejectedprescriptions.push(prescription.prescriptions[i]);
         }else{
-            pendingcount = pendingcount + 1;
+            // pendingcount = pendingcount + 1;
+            pendingprescriptions.push(prescription.prescriptions[i]);
         }
             
         
       }
-      console.log("approved", approvedcount);
-      console.log("rejected",rejetectedcount);
-      console.log("pending", pendingcount);
+      console.log(approvedprescriptions);
+      console.log(rejectedprescriptions);
+      console.log(pendingprescriptions);
 
 
 }

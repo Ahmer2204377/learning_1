@@ -1,0 +1,21 @@
+// function find(array,n){
+//    return array[n];
+   
+// }
+// array=[78,80,13,31,45];
+// n=0;
+// find(array,n);
+
+function find(array,n){
+    const length = array.length;
+    for(let i=0; i< length ; i++){
+        if(n==array[i]){
+            return i;
+        }
+    }
+    
+ }
+ array=[78,80,13,31,45];
+ n=0;
+ find(array,n);
+

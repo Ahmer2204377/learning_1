@@ -715,3 +715,8 @@ function checkstatus(prescription){
 checkstatus(prescriptiondetails);
 
 
+
+
+
+
+
